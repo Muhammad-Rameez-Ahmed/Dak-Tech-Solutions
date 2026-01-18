@@ -34,7 +34,15 @@ export interface TestimonialProps {
   avatar: string;
 }
 
+export interface NavSubLink {
+  label: string;
+  href: string;
+  description?: string;
+  icon?: React.ReactNode;
+}
+
 export interface NavLinkProps {
   label: string;
   href: string;
+  subLinks?: NavSubLink[];
 }

@@ -8,13 +8,27 @@ const Footer: React.FC = () => {
     <footer className="bg-brand-dark border-t border-white/5 py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
         <div className="space-y-6">
-          <Link to="/" className="flex items-center space-x-2 group">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-primary to-brand-secondary flex items-center justify-center font-bold text-white shadow-lg">
-              D
+          <Link to="/" className="inline-block group">
+            <img 
+              src="logo.png" 
+              alt="DAK TECH SOLUTIONS" 
+              className="h-14 md:h-16 w-auto object-contain transition-transform group-hover:scale-105"
+              onError={(e) => {
+                const target = e.target as HTMLImageElement;
+                target.style.display = 'none';
+                const fallback = target.nextElementSibling as HTMLElement;
+                if (fallback) fallback.style.display = 'flex';
+              }}
+            />
+            {/* Fallback branding */}
+            <div className="hidden items-center space-x-2">
+              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-primary to-brand-secondary flex items-center justify-center font-bold text-white shadow-lg">
+                D
+              </div>
+              <span className="font-heading font-bold text-xl tracking-tight text-white uppercase">
+                DAK TECH <span className="text-brand-primary">SOLUTIONS</span>
+              </span>
             </div>
-            <span className="font-heading font-bold text-xl tracking-tight text-white uppercase">
-              DAK TECH <span className="text-brand-primary">SOLUTIONS</span>
-            </span>
           </Link>
           <p className="text-slate-400 text-sm leading-relaxed max-w-xs">
             A technology & marketing partner designed for high-performance brands ready to scale with intelligent automation.

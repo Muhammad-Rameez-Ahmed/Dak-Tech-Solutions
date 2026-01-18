@@ -6,19 +6,66 @@ import {
   ShieldCheck, Award, HeartHandshake, Rocket, Brain, FastForward, Activity,
   TrendingDown, Percent, Users2, Eye, Compass, Layers, RocketIcon, LineChart,
   FileText, Shield, ZapIcon, BarChart, ShoppingCart, Home as HomeIcon, Building2, Briefcase,
-  HelpCircle, Scale, FileSignature
+  HelpCircle, Scale, FileSignature, Code2, Users, FileStack, Lightbulb, MapPin, Laptop
 } from 'lucide-react';
-import { ServiceCardProps, ProjectProps, NavLinkProps, BlogPostProps } from './types';
+import { ServiceCardProps, ProjectProps, NavLinkProps, BlogPostProps, TestimonialProps } from './types';
 
 export const NAV_LINKS: NavLinkProps[] = [
   { label: 'Home', href: '/' },
-  { label: 'Services', href: '/services' },
-  { label: 'Industries', href: '/industries' },
-  { label: 'About', href: '/about' },
-  { label: 'Portfolio', href: '/portfolio' },
-  { label: 'Blogs', href: '/blogs' },
-  { label: 'Resources', href: '/resources' },
-  { label: 'FAQ', href: '/faq' },
+  { 
+    label: 'Services', 
+    href: '/services',
+    subLinks: [
+      { label: 'Web Development', href: '/services', description: 'Next.js & Performance-first sites', icon: <Globe className="w-4 h-4" /> },
+      { label: 'Mobile Apps', href: '/services', description: 'Native React Mobile experiences', icon: <Smartphone className="w-4 h-4" /> },
+      { label: 'AI & Automation', href: '/services', description: 'LLM & Intelligent workflows', icon: <Cpu className="w-4 h-4" /> },
+      { label: 'Digital Marketing', href: '/services', description: 'High-ROAS growth engines', icon: <Megaphone className="w-4 h-4" /> },
+      { label: 'UI/UX Design', href: '/services', description: 'Conversion-focused interfaces', icon: <Palette className="w-4 h-4" /> },
+    ]
+  },
+  { 
+    label: 'Industries', 
+    href: '/industries',
+    subLinks: [
+      { label: 'Startups', href: '/industries', description: 'MVP to Series A scaling', icon: <Rocket className="w-4 h-4" /> },
+      { label: 'E-commerce', href: '/industries', description: 'Scaling D2C revenue', icon: <ShoppingCart className="w-4 h-4" /> },
+      { label: 'SaaS & Fintech', href: '/industries', description: 'Product-led growth', icon: <Layers className="w-4 h-4" /> },
+      { label: 'Real Estate', href: '/industries', description: 'Automated lead pipelines', icon: <HomeIcon className="w-4 h-4" /> },
+    ]
+  },
+  { 
+    label: 'About', 
+    href: '/about',
+    subLinks: [
+      { label: 'Our Story', href: '/about', description: 'The DAK Tech journey', icon: <Users className="w-4 h-4" /> },
+      { label: 'Philosophy', href: '/about', description: 'ROI-first approach', icon: <Lightbulb className="w-4 h-4" /> },
+      { label: 'The Founder', href: '/about', description: 'Meet Daniyal Ahmed Khan', icon: <Users2 className="w-4 h-4" /> },
+    ]
+  },
+  { 
+    label: 'Portfolio', 
+    href: '/portfolio',
+    subLinks: [
+      { label: 'Case Studies', href: '/portfolio', description: 'Real results for real partners', icon: <BarChart className="w-4 h-4" /> },
+      { label: 'Software Projects', href: '/portfolio', description: 'Custom engineered solutions', icon: <Code2 className="w-4 h-4" /> },
+    ]
+  },
+  { 
+    label: 'Insights', 
+    href: '/blogs',
+    subLinks: [
+      { label: 'Growth Blog', href: '/blogs', description: 'Strategies for scaling', icon: <LineChart className="w-4 h-4" /> },
+      { label: 'Tech Trends', href: '/blogs', description: 'AI & Engineering updates', icon: <Laptop className="w-4 h-4" /> },
+    ]
+  },
+  { 
+    label: 'Resources', 
+    href: '/resources',
+    subLinks: [
+      { label: 'Free Growth Audit', href: '/resources', description: 'Deep dive into your systems', icon: <Search className="w-4 h-4" /> },
+      { label: 'Scaling Checklist', href: '/resources', description: 'Founder playbook PDF', icon: <FileStack className="w-4 h-4" /> },
+    ]
+  },
   { label: 'Contact', href: '/contact' },
 ];
 
@@ -424,6 +471,33 @@ export const BLOGS: BlogPostProps[] = [
     date: 'May 01, 2024',
     image: 'https://images.unsplash.com/photo-1543286386-713bdd548da4?auto=format&fit=crop&q=80&w=800',
     author: 'Daniyal Ahmed Khan'
+  }
+];
+
+export const TESTIMONIALS: TestimonialProps[] = [
+  {
+    name: "Marcus Thorne",
+    role: "Founder, Thorne & Co.",
+    content: "DAK TECH didn't just build our app; they built our business strategy. Our conversion rates jumped by 40% within the first two months of launch. They are truly fractional partners.",
+    avatar: "MT"
+  },
+  {
+    name: "Sarah Chen",
+    role: "CMO, Veridia Fintech",
+    content: "The level of technical depth combined with marketing prowess is rare. They understood our complex regulatory requirements while delivering a user experience that our customers love.",
+    avatar: "SC"
+  },
+  {
+    name: "David Ross",
+    role: "CEO, NexGen Real Estate",
+    content: "Finally, an agency that speaks the language of ROI. Their lead generation system has become the primary growth engine for our company. Worth every penny.",
+    avatar: "DR"
+  },
+  {
+    name: "Elena Rodriguez",
+    role: "E-com Director, Aura Luxury",
+    content: "We've worked with dozens of agencies, but DAK TECH is the first one that actually delivered on its promises. Our ROAS tripled in 90 days. Their automation is world-class.",
+    avatar: "ER"
   }
 ];
 

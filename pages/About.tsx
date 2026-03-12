@@ -5,7 +5,7 @@ import { Target, Eye, Lightbulb, TrendingUp, Linkedin, Twitter, Quote, User } fr
 
 const About: React.FC = () => {
   const values = [
-    { title: 'Innovation', desc: 'Constantly pushing the boundaries of what is possible in tech.', icon: <Lightbulb className="text-brand-primary" /> },
+    { title: 'Innovations', desc: 'Constantly pushing the boundaries of what is possible in tech.', icon: <Lightbulb className="text-brand-primary" /> },
     { title: 'Transparency', desc: 'Clear communication and honest feedback at every step.', icon: <Target className="text-brand-secondary" /> },
     { title: 'Scalability', desc: 'Building solutions that grow with your business goals.', icon: <TrendingUp className="text-brand-accent" /> },
     { title: 'Results', desc: 'Data-driven decisions focused on your ROI.', icon: <Eye className="text-brand-primary" /> },
